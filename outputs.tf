@@ -1,6 +1,6 @@
 output "subnet_id" {
     description = "ID of the VPC subnet, deployed by the module"
-    value       = ""
+    value       = aws_subnet.main.id
 }
 
 output "security_group_id" {
