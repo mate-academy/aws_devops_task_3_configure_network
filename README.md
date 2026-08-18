@@ -1,10 +1,10 @@
 # AWS Essentials: Deploy the Network
 
-We will run our Grafana deployment on an EC2 virtual machine, and before we deploy it, we have to prepare the network resources! Luckily, we already deployed a VPC in [previous task](https://github.com/mate-academy/aws_devops_task_1_test_lab_setup) — now we need to add some resources. 
+We will run our Grafana deployment on an EC2 virtual machine, and before we deploy it, we have to prepare the network resources! Luckily, we already deployed a VPC in [previous task](https://github.com/mate-academy/aws_devops_task_1_test_lab_setup) — now we need to add some resources.
 
 ## Prerequirements
 
-Before completing any task in the module, make sure that you followed all the steps described in the **Environment Setup** topic, in particular: 
+Before completing any task in the module, make sure that you followed all the steps described in the **Environment Setup** topic, in particular:
 
 1. Make sure you have an [AWS](https://aws.amazon.com/free/) account.
 
@@ -30,7 +30,7 @@ To complete this task:
 
 2. Edit `main.tf` — add resources, required for this task: 
     
-    - Use the [`aws_subnet`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) resource to deploy a subnet with the `grafana` name tag. You can use any IP address range as a subnet range, valid for your VPC. 
+    - Use the [`aws_subnet`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) resource to deploy a subnet with the `grafana` name tag. You can use any IP address range as a subnet range, valid for your VPC.
 
     - Use the [`aws_internet_gateway`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) resource to deploy an Internet Gateway with the `mate-aws-grafana-lab` name tag. Make sure that the Internet Gateway resource is associated with your VPC. 
 
@@ -60,7 +60,7 @@ To complete this task:
     pwsh ./tests/test-tf-plan.ps1
     ```
 
-💡 If any test fails, please check your task code and repeat step 4 to generate a new `tfplan.json` file. 
+💡 If any test fails, please check your task code and repeat step 4 to generate a new `tfplan.json` file.
 
 6. Deploy infrastructure using the following command: 
     
@@ -69,5 +69,5 @@ To complete this task:
     ```
     
 Make sure to collect module outputs — we will use those values in the next tasks. 
-    
+
 5. Commit the `tfplan.json` file and submit your solution for review. 
