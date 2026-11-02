@@ -79,6 +79,6 @@ resource "aws_vpc_security_group_ingress_rule" "allow_3000" {
 # to allow outbound traffic from your virtual machine: 
 resource "aws_vpc_security_group_egress_rule" "allow_all_eggress" {
   security_group_id = aws_security_group.sg.id
-  cidr_ipv4   = "0.0.0.0/0"
-  ip_protocol = -1
+  cidr_ipv4         = "0.0.0.0/0"
+  ip_protocol       = -1
 }
