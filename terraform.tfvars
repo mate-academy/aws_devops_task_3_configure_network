@@ -1,1 +1,1 @@
-vpc_id = ""
+vpc_id = "vpc-0889c1e1cb1eb84ab"
